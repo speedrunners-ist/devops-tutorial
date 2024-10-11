@@ -1,0 +1,15 @@
+{
+  "title": "Deployments with Piku",
+"description": "In this tutorial you will learn how to deploy applications with Piku.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
