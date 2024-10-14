@@ -4,7 +4,7 @@ Now that Piku is installed and running, we can start deploying our first applica
 
 ## How does it work?
 
-Generally speaking, Piku works by pushing to a remote, which is usually a server/VPS/similar, and uses git hooks to deploy the application. In our case, though, due to KillerCoda's limitations, it's not possible to have multiple hosts, so we'll have to deploy it locally (that is, the "remote" will be localhost).
+Generally speaking, Piku works by pushing to a remote, which is usually a server/VPS/similar, and uses git hooks to deploy the application. In our case, though, since we found it quite hard to navigate KillerCoda's documentations and find out how to set up a multiple host setup, we've opted to deploy it locally (that is, the "remote" will be localhost).
 
 ### Ok but... internally?
 
