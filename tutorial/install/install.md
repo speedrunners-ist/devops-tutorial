@@ -13,11 +13,6 @@ We can now proceed to the bootstrap script. The first command will automatically
 
 ```bash
 ./piku-bootstrap first-run --no-interactive
-```{{exec}}
-
-Finally, we can install Piku itself:
-
-```bash
 ./piku-bootstrap install
 ```{{exec}}
 
