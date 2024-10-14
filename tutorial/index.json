@@ -9,7 +9,15 @@
 
     "steps": [
       {
-        "text": "step1.md"
+        "title": "Step 1: Install Piku",
+        "text": "install/install.md",
+        "foreground": "install/foreground.sh",
+        "verify": "install/verify.sh"
+      },
+      {
+        "title": "Step 2: Deploying a web application",
+        "text": "first-deploy/first-deploy.md",
+        "verify": "first-deploy/verify.sh"
       }
     ],
 

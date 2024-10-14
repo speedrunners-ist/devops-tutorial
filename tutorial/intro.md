@@ -10,7 +10,7 @@ you can, essentially, do `git push` deployments!
 
 ## Tutorial Overview
 
-In this tutorial, we will start by deploying a web service using Piku.
+In this tutorial, we will start by deploying a simple web application using Piku.
 Then, we will tinker with some environment variables and redeploy the application.
 Finally, we will create a custom plugin and use it.
 
