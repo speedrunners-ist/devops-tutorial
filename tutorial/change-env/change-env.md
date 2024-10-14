@@ -43,7 +43,7 @@ We will modify the file `worker.clj`
 (defn dostuff []
   (do
     (print "I'm doing lazy work\n")
-    (print "Resting for 10 seconds\n")
+    (println "Resting for" (Integer/parseInt (or (System/getenv "TIMER_DURATION") "10000")) "milliseconds.")
     (flush)))
 
   (loop [x 1]
