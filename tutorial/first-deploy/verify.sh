@@ -1,26 +1,17 @@
-#!/usr/bin/bash
+#!/bin/bash
 
-# URL to send the request to
-URL="http://127.0.0.1:2482"
+# Define the target IP address and port
+target_ip="127.0.0.1"  # Change this to your target IP
+target_port="4000"      # Change this to your target port
 
-# Send a request to the URL
-RESPONSE=$(curl --silent --write-out "HTTPSTATUS:%{http_code}" $URL)
+# Check if the port is open using nc (netcat)
+nc -z -v $target_ip $target_port 2>&1 | grep -q 'succeeded'
 
-# Extract the body and the status code from the response
-BODY=$(echo $RESPONSE | sed -e 's/HTTPSTATUS\:.*//g')
-STATUS=$(echo $RESPONSE | tr -d '\n' | sed -e 's/.*HTTPSTATUS://')
-
-# If the status code is not 200, exit with code 1
-if [ $STATUS -ne 200 ]; then
-    echo "Error: Failed to reach $URL"
-    exit 1
+# Check the exit status of the last command
+if [ $? -eq 0 ]; then
+  echo "Port $target_port on $target_ip is open."
+  exit 0
+else
+  echo "Port $target_port on $target_ip is closed or unreachable."
+  exit 1
 fi
-
-# If the body is empty, exit with code 1
-if [ -z "$BODY" ]; then
-    echo "Error: No response from $URL"
-    exit 1
-fi
-
-echo "Success: Received response from $URL"
-exit 0

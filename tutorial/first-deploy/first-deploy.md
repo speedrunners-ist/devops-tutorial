@@ -60,17 +60,17 @@ Here’s an internal flow of what happens when you push your code to Piku:
 
 ## Sample Application
 
-Piku actually has a sample Node.js application that we can use to test our deployment. It's hosted on Github, so the first step is for you to clone the repository:
+Piku actually has a sample java application that we can use to test our deployment. It's hosted on Github, so the first step is for you to clone the repository:
 
 ```bash
-git clone https://github.com/piku/sample-nodejs-app
-cd sample-nodejs-app
+git clone https://github.com/piku/sample-java-app
+cd sample-java-app
 ```{{exec}}
 
-We'll want to be able to deterministically check whether or not the application has been correctly deployed. To do this, we'll set up a port for the application to run on (using the `PORT` environment variable):
+In order to deploy the application we will need to install maven
 
 ```bash
-echo "PORT=2482" >> ENV
+apt install maven
 ```{{exec}}
 
 ## Deploying
@@ -78,17 +78,20 @@ echo "PORT=2482" >> ENV
 The first step here is to add a new remote to the repository:
 
 ```bash
-git remote add piku piku@localhost:sample-nodejs-app
+git remote add piku piku@localhost:sample-java-app
 ```{{exec}}
 
 Now, we can push the application to Piku:
 
 ```bash
-git config --global user.email "spoon@best.com"
-git config --global user.name "galapagos"
-git commit -am "Change application port to 2482"
 git push piku master
 ```{{exec}}
 
-Finally, we want to check whether the application has correctly been deployed. [Click here]({{TRAFFIC_HOST1_2482}}) to check!
+Finally, we want to check whether the application has correctly been deployed.
+The following command will show the logs of the application, in this case an application with a 10 second timer.
+
+```bash
+ssh piku@localhost logs sample-java-app
+```{{exec}}
+
 You should also click the green check button below to formally complete this step.
