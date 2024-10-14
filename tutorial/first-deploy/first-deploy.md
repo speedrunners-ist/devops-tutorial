@@ -58,6 +58,10 @@ Here’s an internal flow of what happens when you push your code to Piku:
 
 5. **App Startup**: Once everything is set up, Piku starts your app and monitors the processes. If a process crashes, `systemd` or `supervisord` will restart it automatically, ensuring high availability.
 
+Below is a flowchart succintly representing this process:
+
+[Piku lifecycle](../assets/flowgraph.png)
+
 ## Sample Application
 
 Piku actually has a sample clojure application that we can use to test our deployment. It's hosted on Github, so the first step is for you to clone the repository:
