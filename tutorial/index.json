@@ -13,7 +13,7 @@
         "verify": "install/verify.sh"
       },
       {
-        "title": "Step 2: Deploying a java application",
+        "title": "Step 2: Deploying a clojure application",
         "text": "first-deploy/first-deploy.md",
         "verify": "first-deploy/verify.sh"
       },

@@ -60,17 +60,22 @@ Here’s an internal flow of what happens when you push your code to Piku:
 
 ## Sample Application
 
-Piku actually has a sample java application that we can use to test our deployment. It's hosted on Github, so the first step is for you to clone the repository:
+Piku actually has a sample clojure application that we can use to test our deployment. It's hosted on Github, so the first step is for you to clone the repository:
 
 ```bash
-git clone https://github.com/piku/sample-java-app
-cd sample-java-app
+git clone https://github.com/piku/sample-clojure-app
+cd sample-clojure-app
 ```{{exec}}
 
-In order to deploy the application we will need to install maven
+In order to deploy the application we will need to install clojure
 
 ```bash
-apt install maven
+curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+chmod +x lein
+sudo mv lein /usr/local/bin/
+lein self-install
+
+apt install openjdk-17-jdk
 ```{{exec}}
 
 ## Deploying
@@ -78,7 +83,7 @@ apt install maven
 The first step here is to add a new remote to the repository:
 
 ```bash
-git remote add piku piku@localhost:sample-java-app
+git remote add piku piku@localhost:sample-clojure-app
 ```{{exec}}
 
 Now, we can push the application to Piku:
@@ -91,7 +96,7 @@ Finally, we want to check whether the application has correctly been deployed.
 The following command will show the logs of the application, in this case an application with a 10 second timer.
 
 ```bash
-ssh piku@localhost logs sample-java-app
+ssh piku@localhost logs sample-clojure-app
 ```{{exec}}
 
 You should also click the green check button below to formally complete this step.
