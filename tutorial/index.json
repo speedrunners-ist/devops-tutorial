@@ -1,12 +1,10 @@
 {
   "title": "Piku",
   "description": "Learn about Piku and its features",
-
   "details": {
     "intro": {
       "text": "intro.md"
     },
-
     "steps": [
       {
         "title": "Step 1: Install Piku",
@@ -15,17 +13,20 @@
         "verify": "install/verify.sh"
       },
       {
-        "title": "Step 2: Deploying a web application",
+        "title": "Step 2: Deploying a clojure application",
         "text": "first-deploy/first-deploy.md",
         "verify": "first-deploy/verify.sh"
+      },
+      {
+        "title": "Step 3: Change Environment Variables",
+        "text": "change-env/change-env.md",
+        "verify": "cahnge-env/verify.sh"
       }
     ],
-
     "finish": {
       "text": "finish.md"
     }
   },
-
   "backend": {
     "imageid": "ubuntu"
   }

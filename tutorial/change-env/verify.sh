@@ -1,7 +1,7 @@
 #!/bin/bash
 
 target_ip="127.0.0.1"
-target_port="9500"
+target_port="2482"
 
 nc -z -v $target_ip $target_port 2>&1 | grep -q 'succeeded'
 
