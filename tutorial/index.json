@@ -22,9 +22,9 @@
         "text": "change-env/change-env.md",
         "verify": "change-env/verify.sh"
       },
-	{
+      {
         "title": "Step 4: Add Plugins",
-        "text": "add-plugin/add-plugin.md",
+        "text": "add-plugin/add-plugin.md"
       }
     ],
     "finish": {
