@@ -18,4 +18,4 @@ Finally, we will create a custom plugin and use it.
 
 By the end of this tutorial, you will be able to deploy your own personal projects and easily manage them using Piku.
 
-![Piku Logo](./assets/logo.svg)
+![Piku Logo](./assets/logo.png)
