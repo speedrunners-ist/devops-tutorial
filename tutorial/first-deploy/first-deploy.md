@@ -84,6 +84,7 @@ git remote add piku piku@localhost:sample-nodejs-app
 Now, we can push the application to Piku:
 
 ```bash
+git commit -am "Change application port to 2482"
 git push piku master
 ```{{exec}}
 
