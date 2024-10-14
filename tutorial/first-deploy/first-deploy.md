@@ -70,7 +70,7 @@ cd sample-nodejs-app
 We'll want to be able to deterministically check whether or not the application has been correctly deployed. To do this, we'll set up a port for the application to run on (using the `PORT` environment variable):
 
 ```bash
-echo "PORT=2482" > ENV
+echo "PORT=2482" >> ENV
 ```{{exec}}
 
 ## Deploying
