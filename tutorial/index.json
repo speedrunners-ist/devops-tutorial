@@ -16,7 +16,8 @@
       },
       {
         "title": "Step 2: Deploying a web application",
-        "text": "first-deploy/first-deploy.md"
+        "text": "first-deploy/first-deploy.md",
+        "verify": "first-deploy/verify.sh"
       }
     ],
 

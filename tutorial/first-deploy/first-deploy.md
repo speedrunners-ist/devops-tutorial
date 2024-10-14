@@ -91,3 +91,4 @@ git push piku master
 ```{{exec}}
 
 Finally, we want to check whether the application has correctly been deployed. [Click here]({{TRAFFIC_HOST1_2482}}) to check!
+You should also click the green check button below to formally complete this step.
