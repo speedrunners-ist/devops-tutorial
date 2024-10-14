@@ -10,7 +10,7 @@ you can, essentially, do `git push` deployments!
 
 ## Tutorial Overview
 
-In this tutorial, we will start by deploying a web service using Piku.
+In this tutorial, we will start by deploying a simple clojure application using Piku.
 Then, we will tinker with some environment variables and redeploy the application.
 Finally, we will create a custom plugin and use it.
 
@@ -18,4 +18,4 @@ Finally, we will create a custom plugin and use it.
 
 By the end of this tutorial, you will be able to deploy your own personal projects and easily manage them using Piku.
 
-![Piku Logo](./assets/logo.svg)
+![Piku Logo](./assets/logo.png)
