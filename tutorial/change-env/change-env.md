@@ -29,6 +29,7 @@ sed -i 's/^PORT=9500/PORT=2482/' ENV
 Then we can define some custom environment variables that the service will use.
 
 ```
+echo "" >> ENV
 echo "TIMER_DURATION=2000" >> ENV
 ```{{exec}}
 
