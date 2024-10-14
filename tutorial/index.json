@@ -7,10 +7,20 @@
     },
     "steps": [
       {
-        "text": "step1.md"
+        "title": "Step 1: Install Piku",
+        "text": "install/install.md",
+        "foreground": "install/foreground.sh",
+        "verify": "install/verify.sh"
       },
       {
-        "text": "step3.md"
+        "title": "Step 2: Deploying a java application",
+        "text": "first-deploy/first-deploy.md",
+        "verify": "first-deploy/verify.sh"
+      },
+      {
+        "title": "Step 3: Change Environment Variables",
+        "text": "change-env/change-env.md",
+        "verify": "cahnge-env/verify.sh"
       }
     ],
     "finish": {
