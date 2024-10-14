@@ -54,7 +54,7 @@ Here’s an internal flow of what happens when you push your code to Piku:
 
 3. **Process Setup**: Based on the `Procfile`, Piku sets up process definitions using `systemd` or `supervisord`, creating background services for your app.
    
-4. **Environment Injection**: Piku injects any environment variables from the `.env` file into the running processes, ensuring they have the necessary configuration to function.
+4. **Environment Injection**: Piku injects any environment variables from the `ENV` file into the running processes, ensuring they have the necessary configuration to function.
 
 5. **App Startup**: Once everything is set up, Piku starts your app and monitors the processes. If a process crashes, `systemd` or `supervisord` will restart it automatically, ensuring high availability.
 
