@@ -67,6 +67,12 @@ git clone https://github.com/piku/sample-nodejs-app
 cd sample-nodejs-app
 ```{{exec}}
 
+We'll want to be able to deterministically check whether or not the application has been correctly deployed. To do this, we'll set up a port for the application to run on (using the `PORT` environment variable):
+
+```bash
+echo "PORT=2482" > ENV
+```{{exec}}
+
 ## Deploying
 
 The first step here is to add a new remote to the repository:
@@ -81,5 +87,4 @@ Now, we can push the application to Piku:
 git push piku master
 ```{{exec}}
 
-Finally, we want to check whether the application has correctly been deployed. Click the green button below to check it out!
-TODO^
+Finally, we want to check whether the application has correctly been deployed. [Click here]({{TRAFFIC_HOST1_2482}}) to check!
