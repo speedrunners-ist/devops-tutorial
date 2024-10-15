@@ -19,7 +19,7 @@ PORT=9500
 Here, the `AUTO_RESTART` variable is set to 1, which means that **after every push** the service will be redeployed by Piku.
 The `PORT` variable is set to 9500, the default port that the service will be listening on.
 
-By looking at the [https://piku.github.io/configuration/env.html](documentation), there are a lot of settings that we can define.
+By looking at the [documentation](https://piku.github.io/configuration/env.html), there are a lot of settings that we can define.
 
 We will start by changing the port at which the service will be listening.
 
