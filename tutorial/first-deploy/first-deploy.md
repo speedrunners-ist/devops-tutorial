@@ -8,7 +8,7 @@ Generally speaking, Piku works by pushing to a remote, which is usually a server
 
 ### Ok but... internally?
 
-When you deploy an app using Piku, it relies on a few key concepts and files, including `Procfiles` and `ENV` files, to define how the application should run and what environment variables are required.
+When you deploy an app using Piku, it relies on a few key concepts and files, including `Procfile` and `ENV` files, to define how the application should run and what environment variables are required.
 
 #### **Procfile**
 
@@ -60,7 +60,7 @@ Here’s an internal flow of what happens when you push your code to Piku:
 
 Below is a flowchart succintly representing this process:
 
-[Piku lifecycle](../assets/flowgraph.png)
+![Piku lifecycle](../assets/flowgraph.png)
 
 ## Sample Application
 
@@ -79,7 +79,7 @@ chmod +x lein
 sudo mv lein /usr/local/bin/
 lein self-install
 
-apt install openjdk-17-jdk
+apt install --assume-yes openjdk-17-jdk
 ```{{exec}}
 
 ## Deploying
@@ -103,4 +103,6 @@ The following command will show the logs of the application, in this case an app
 ssh piku@localhost logs sample-clojure-app
 ```{{exec}}
 
-You should also click the green check button below to formally complete this step.
+Use `Ctrl+C` to exit the logs.
+
+Click the `Check` button below to formally complete this step.

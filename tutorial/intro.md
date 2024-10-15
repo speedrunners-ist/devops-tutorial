@@ -16,6 +16,7 @@ Finally, we will create a custom plugin and use it.
 
 ## Objectives
 
-By the end of this tutorial, you will be able to deploy your own personal projects and easily manage them using Piku.
+By the end of this tutorial, you will be able to not only deploy your own personal projects using Piku,
+but also get to know some core details about its under-the-hood implementation.
 
 ![Piku Logo](./assets/logo.png)

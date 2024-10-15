@@ -44,7 +44,7 @@ We will modify the file `worker.clj`:
 
 (defn dostuff []
   (do
-    (print "I'm doing lazy work\n")
+    (print "I'm doing fast work\n")
     (println "Resting for" (Integer/parseInt (or (System/getenv "TIMER_DURATION") "10000")) "milliseconds.")
     (flush)))
 
@@ -72,3 +72,6 @@ Your changes will be deployed, and you should now be able to see that the servic
 ssh piku@localhost logs sample-clojure-app
 ```{{exec}}
 
+Use `Ctrl+C` to exit the logs.
+
+Click the `Check` button below to formally complete this step.

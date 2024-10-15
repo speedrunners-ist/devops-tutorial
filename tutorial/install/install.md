@@ -19,4 +19,4 @@ We can now proceed to the bootstrap script. The first command will automatically
 ./piku-bootstrap install
 ```{{exec}}
 
-Click the green button below to check whether Piku was correctly installed!
+Click the `Check` button below to check whether Piku was correctly installed!
