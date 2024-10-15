@@ -21,14 +21,18 @@ To quote them:
 ## Writing a Plugin
 
 For this, first, we need to copy the Piku from the `piku` user's home directory to root.
-TODO: explain why this is required
+We need to do this because only this instance of piku is able to use the plugins that we define.
 
 ```bash
 cp /home/piku/piku.py /root/piku.py
 ```{{execute}}
 
 We can define our plugin in the `/root/.piku/plugins/automation/__init__.py` file.
-TODO: explain what it is, why we want it/why it NEEDS to be a plugin
+
+In order to create plugins we use [https://click.palletsprojects.com/en/8.1.x/](click) which is a Python package that allows us to create command-line interfaces.
+We can define groups of commands, and then define the commands themselves with or without arguments.
+
+In this tutorial, we will create a plugin that allows us to change the timer of a Clojure app to a specific value given as an argument.
 
 ```python
 import click
@@ -43,7 +47,7 @@ def automation():
 @automation.command("automation:change-timer")
 @click.argument('duration')
 def change_timer(duration):
-    """change the timer variable"""
+    """changes the timer variable of the sample-clojure-app"""
     os.system("ssh piku@localhost sample-clojure-app config:set TIMER_DURATION={}".format(duration))
     pass
 
@@ -51,8 +55,6 @@ def cli_commands():
     return automation
 ```{{copy}}
 
-TODO: we should actually explain that what we're doing here is creating a command,
-which allows us to do <things>, etc etc
 After that everytime we use piku, the new command should be usable.
 
 We can test the new command by running:
