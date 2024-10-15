@@ -8,15 +8,15 @@ Piku is a (self-called) tiny and open-source self-hosted Platform as a Service (
 It shines in its simplicity and ease of use, combined with the ability to extend its functionalities with plugins:
 you can, essentially, do `git push` deployments!
 
-## Tutorial Overview
+## Tutorial Overview + Objectives
 
 In this tutorial, we will start by deploying a simple clojure application using Piku.
 Then, we will tinker with some environment variables and redeploy the application.
 Finally, we will create a custom plugin and use it.
 
-## Objectives
-
 By the end of this tutorial, you will be able to not only deploy your own personal projects using Piku,
-but also get to know some core details about its under-the-hood implementation.
+but also get to know the core details about its under-the-hood implementation.
+You will know more about what `Procfile` and `ENV` files are, understand
+how to access a Piku app's logs, and how to add plugins to Piku applications.
 
 ![Piku Logo](./assets/logo.png)
