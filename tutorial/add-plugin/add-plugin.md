@@ -20,9 +20,6 @@ To quote them:
 
 ## Writing a Plugin
 
-For this, first, we need to copy the Piku from the `piku` user's home directory to root.
-We need to do this because only this instance of piku is able to use the plugins that we define.
-
 In order to create plugins we use [click](https://click.palletsprojects.com/en/8.1.x/) which is a Python package that allows us to create command-line interfaces.
 We can define groups of commands, and then define the commands themselves with or without arguments.
 
