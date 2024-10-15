@@ -74,4 +74,4 @@ ssh piku@localhost logs sample-clojure-app
 
 Use `Ctrl+C` to exit the logs.
 
-Click the `check` button below to formally complete this step.
+Click the `Check` button below to formally complete this step.

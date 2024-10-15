@@ -30,7 +30,7 @@ We can define our plugin in the `/root/.piku/plugins/automation/__init__.py` fil
 ```bash
 mkdir -p /home/piku/.piku/plugins/automation
 touch /home/piku/.piku/plugins/automation/__init__.py
-```{{execute}}
+```{{exec}}
 
 Then we can define the plugin as follows:
 
@@ -61,7 +61,7 @@ We can test the new command by running:
 
 ```bash
 ssh piku@localhost automation:change-timer 5000
-```{{execute}}
+```{{exec}}
 
 ```bash
 ssh piku@localhost logs sample-clojure-app
@@ -69,4 +69,4 @@ ssh piku@localhost logs sample-clojure-app
 
 Use `Ctrl+C` to exit the logs.
 
-Click the `next` button below to formally complete the tutorial.
+Click the `Next` button below to formally complete the tutorial.
