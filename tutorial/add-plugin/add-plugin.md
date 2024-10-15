@@ -23,16 +23,19 @@ To quote them:
 For this, first, we need to copy the Piku from the `piku` user's home directory to root.
 We need to do this because only this instance of piku is able to use the plugins that we define.
 
-```bash
-cp /home/piku/piku.py /root/piku.py
-```{{execute}}
+In order to create plugins we use [click](https://click.palletsprojects.com/en/8.1.x/) which is a Python package that allows us to create command-line interfaces.
+We can define groups of commands, and then define the commands themselves with or without arguments.
+
+In this tutorial, we will create a plugin that allows us to change the timer of our Clojure app to a specific value given as an argument.
 
 We can define our plugin in the `/root/.piku/plugins/automation/__init__.py` file.
 
-In order to create plugins we use [https://click.palletsprojects.com/en/8.1.x/](click) which is a Python package that allows us to create command-line interfaces.
-We can define groups of commands, and then define the commands themselves with or without arguments.
+```bash
+mkdir -p /home/piku/.piku/plugins/automation
+touch /home/piku/.piku/plugins/automation/__init__.py
+```{{execute}}
 
-In this tutorial, we will create a plugin that allows us to change the timer of a Clojure app to a specific value given as an argument.
+Then we can define the plugin as follows:
 
 ```python
 import click
@@ -48,7 +51,7 @@ def automation():
 @click.argument('duration')
 def change_timer(duration):
     """changes the timer variable of the sample-clojure-app"""
-    os.system("ssh piku@localhost sample-clojure-app config:set TIMER_DURATION={}".format(duration))
+    os.system("./piku.py config:set sample-clojure-app TIMER_DURATION={}".format(duration))
     pass
 
 def cli_commands():
@@ -60,7 +63,13 @@ After that everytime we use piku, the new command should be usable.
 We can test the new command by running:
 
 ```bash
-./piku automation:change-timer 5000
+ssh piku@localhost automation:change-timer 5000
 ```{{execute}}
 
+```bash
+ssh piku@localhost logs sample-clojure-app
+```{{exec}}
 
+Use `Ctrl+C` to exit the logs.
+
+Click the `next` button below to formally complete the tutorial.
