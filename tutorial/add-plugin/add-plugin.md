@@ -32,7 +32,7 @@ mkdir -p /home/piku/.piku/plugins/automation
 touch /home/piku/.piku/plugins/automation/__init__.py
 ```{{exec}}
 
-Then we can define the plugin as follows:
+Then we can define the plugin as follows in the `__init__.py` file:
 
 ```python
 import click
